@@ -10,7 +10,6 @@
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -83,9 +83,9 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="128dp"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:background="@drawable/color_banner"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Categorias"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -170,13 +170,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:id="@+id/recyclerViewCat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8"/>
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
                 <TextView
@@ -184,7 +187,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Populares"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -196,7 +199,12 @@
                     android:id="@+id/reciclerPopulares"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -235,10 +243,12 @@
 
                     <ImageView
                         android:id="@+id/btn1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/btn1" />
+                        app:srcCompat="@drawable/home"
+                        app:tint="#858282" />
 
                     <TextView
                         android:id="@+id/textViewbtn1"
@@ -259,10 +269,12 @@
 
                     <ImageView
                         android:id="@+id/btn2"
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/btn2" />
+                        android:tint="#858282"
+                        app:srcCompat="@drawable/person" />
 
                     <TextView
                         android:id="@+id/textViewbtn2"
@@ -284,9 +296,11 @@
 
                     <ImageView
                         android:id="@+id/btn3"
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:tint="#858282"
                         app:srcCompat="@drawable/btn3" />
 
                     <TextView
@@ -308,10 +322,12 @@
 
                     <ImageView
                         android:id="@+id/btn3oculto"
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/btn3" />
+                        android:tint="#858282"
+                        app:srcCompat="@drawable/question" />
 
                     <TextView
                         android:id="@+id/textViewbtn3oculto"
@@ -332,10 +348,12 @@
 
                     <ImageView
                         android:id="@+id/btn4"
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/btn4" />
+                        android:tint="#858282"
+                        app:srcCompat="@drawable/settings" />
 
                     <TextView
                         android:id="@+id/textViewbtn4"
@@ -356,8 +374,9 @@
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#D3BEAB"
-            app:layout_anchor="@id/app_bar">
-
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="30dp"
+            app:tint="#000000">
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

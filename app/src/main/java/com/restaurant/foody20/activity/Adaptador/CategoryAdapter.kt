@@ -8,8 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.annotation.GlideModule
 import com.restaurant.foody20.R
+import com.restaurant.foody20.activity.Modelos.CategoryModel
+
 class CategoryAdapter(private val context: Context, private val categories: List<CategoryModel> ):
     RecyclerView.Adapter<CategoryViewHolder>() {
 
