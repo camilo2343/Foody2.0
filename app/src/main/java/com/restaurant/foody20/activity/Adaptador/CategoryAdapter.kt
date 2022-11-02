@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.annotation.GlideModule
 import com.restaurant.foody20.R
-
 class CategoryAdapter(private val context: Context, private val categories: List<CategoryModel> ):
     RecyclerView.Adapter<CategoryViewHolder>() {
 
@@ -29,6 +29,7 @@ class CategoryAdapter(private val context: Context, private val categories: List
         val category = categories[position]
         holder.type.text = category.type
 
+        // Codigo para Firebase
         Glide.with(context)
             .load(category.url)
             .into(holder.url)
