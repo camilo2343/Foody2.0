@@ -16,12 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="60dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -273,8 +275,8 @@
                         android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:tint="#858282"
-                        app:srcCompat="@drawable/person" />
+                        app:srcCompat="@drawable/person"
+                        app:tint="#858282" />
 
                     <TextView
                         android:id="@+id/textViewbtn2"
@@ -300,7 +302,6 @@
                         android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:tint="#858282"
                         app:srcCompat="@drawable/btn3" />
 
                     <TextView
@@ -326,8 +327,8 @@
                         android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:tint="#858282"
-                        app:srcCompat="@drawable/question" />
+                        app:srcCompat="@drawable/question"
+                        app:tint="#858282" />
 
                     <TextView
                         android:id="@+id/textViewbtn3oculto"
@@ -352,8 +353,8 @@
                         android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:tint="#858282"
-                        app:srcCompat="@drawable/settings" />
+                        app:srcCompat="@drawable/settings"
+                        app:tint="#858282" />
 
                     <TextView
                         android:id="@+id/textViewbtn4"
