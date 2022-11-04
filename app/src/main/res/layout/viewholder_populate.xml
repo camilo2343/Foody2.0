@@ -14,7 +14,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
-        android:text="title"
+        android:text="@string/titulo"
         android:textColor="#373b54"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -31,7 +31,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:srcCompat="@drawable/pop_1" />
+        app:srcCompat="@drawable/pop_1"
+        android:contentDescription="@string/pic" />
 
     <TextView
         android:id="@+id/cost"
@@ -65,7 +66,7 @@
         android:paddingTop="3dp"
         android:paddingEnd="10dp"
         android:paddingBottom="3dp"
-        android:text="+ Agregar"
+        android:text="@string/agregar"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
