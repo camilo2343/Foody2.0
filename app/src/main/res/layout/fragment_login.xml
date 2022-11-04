@@ -21,6 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="522dp"
+                android:contentDescription="@string/imagineView9"
                 android:scaleType="fitXY"
                 android:src="@drawable/backgroundlogin"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +29,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ImageContrastCheck" />
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -39,13 +41,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.783" />
+                app:layout_constraintVertical_bias="0.783"
+                android:contentDescription="@string/imagineview10" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inicie Sesion"
+                android:text="@string/inicie_sesion"
                 android:textColor="#ffffffff"
                 android:textSize="40sp"
                 android:textStyle="bold"
@@ -53,14 +56,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.631" />
+                app:layout_constraintVertical_bias="0.631"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Usuario"
+                android:text="@string/usuario_login"
                 android:textSize="27sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/inputemail"
@@ -74,21 +78,25 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:backgroundTint="@android:color/transparent"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.787"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Constraseña"
+                android:text="@string/constrase_a"
                 android:textSize="27sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/inputpass"
@@ -102,15 +110,16 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:backgroundTint="@android:color/transparent"
                 android:ems="10"
-                android:hint="Contraseña"
+                android:hint="@string/contrase_a"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView19"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
 
             <Button
                 android:id="@+id/btnlogin"
@@ -119,17 +128,18 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:text="Iniciar sesion"
+                android:text="@string/iniciar_sesion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputpass" />
+                app:layout_constraintTop_toBottomOf="@+id/inputpass"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textcomplementario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Tambien puede usar"
+                android:text="@string/tambien_puede_usar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
@@ -145,7 +155,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/imgfacebook"
                 app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
+                app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
+                android:contentDescription="@string/log_google" />
 
             <ImageView
                 android:id="@+id/imgfacebook"
@@ -155,7 +166,8 @@
                 android:src="@drawable/facebook"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
+                app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
+                android:contentDescription="@string/log_facebook" />
 
             <ImageView
                 android:id="@+id/imgtwitter"
@@ -163,11 +175,13 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/log_twitter"
                 android:src="@drawable/twitter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.445"
                 app:layout_constraintStart_toEndOf="@+id/imgfacebook"
-                app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
+                app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/textView21"
@@ -175,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Ya te encuentras registrado?"
+                android:text="@string/ya_te_encuentras_registrado"
                 app:layout_constraintStart_toStartOf="@+id/imggoogle"
                 app:layout_constraintTop_toBottomOf="@+id/imgfacebook" />
 
@@ -184,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Registrate"
+                android:text="@string/registrate"
                 android:textColor="@color/light_blue_900"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/imgtwitter"

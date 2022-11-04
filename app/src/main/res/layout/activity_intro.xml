@@ -16,13 +16,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/background_intro2" />
+        app:srcCompat="@drawable/background_intro2"
+        android:contentDescription="@string/imagineView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Foody"
+        android:text="@string/foody"
         android:textColor="@color/white"
         android:textSize="68sp"
         android:textStyle="bold"
@@ -43,14 +44,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logofoody" />
+        app:srcCompat="@drawable/logofoody"
+        android:contentDescription="@string/imagineview2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
-        android:text="Envio de comida App"
+        android:text="@string/envio_de_comida_app"
         android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -65,7 +67,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/btn_intro"
-        android:text="Comencemos"
+        android:text="@string/comencemos"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
