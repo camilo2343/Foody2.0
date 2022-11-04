@@ -3,21 +3,14 @@ package com.restaurant.foody20.activity.Fragments
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcel
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.MainActivity
 import com.restaurant.foody20.activity.ProviderType
 import com.restaurant.foody20.databinding.FragmentLoginBinding
-import java.security.Provider
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 class LoginFragment : Fragment() {
 
@@ -28,9 +21,6 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        //inicioSesion()
-        //return inflater.inflate(R.layout.fragment_login, container, false)
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         inicioSesion()
         return _binding.root
@@ -40,18 +30,18 @@ class LoginFragment : Fragment() {
 
     fun inicioSesion(){
 
-        binding.btnlogin?.setOnClickListener(View.OnClickListener {
+        binding.btnlogin.setOnClickListener(View.OnClickListener {
 
             var email = binding.inputemail.text.toString()
             var pass = binding.inputpass.text.toString()
 
-            if ( email?.isNotEmpty() == true && pass?.isNotEmpty() == true){
+            if ( email.isNotEmpty()  && pass.isNotEmpty()){
                 ///if(esCorreo(email.toString())){ }
 
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(email,pass).addOnCompleteListener{
                         if (it.isSuccessful){
-                            showHome(it.result?.user?.email.toString() ?: "", ProviderType.BASIC)
+                            showHome(it.result?.user?.email.toString(), ProviderType.BASIC)
                         }else{
                             showAlertFiled()
                         }
@@ -91,7 +81,7 @@ class LoginFragment : Fragment() {
         dialogo.show()
     }
 
-
+/*
     fun esCorreo(texto:String):Boolean{
         var patroncito: Pattern =Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
         var comparador: Matcher =patroncito.matcher(texto)
@@ -109,6 +99,8 @@ class LoginFragment : Fragment() {
         return true
 
     }
+    */
+
 
 }
 
