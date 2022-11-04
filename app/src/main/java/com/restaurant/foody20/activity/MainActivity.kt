@@ -14,11 +14,17 @@ import com.restaurant.foody20.activity.Information.PopulateData
 import com.restaurant.foody20.activity.Modelos.CategoryModel
 import com.restaurant.foody20.databinding.ActivityMainBinding
 
+enum class ProviderType{
+BASIC
+}
+
+@Suppress("NAME_SHADOWING")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     val profileFragment = LoginFragment()
     val fragmentManager: FragmentManager = supportFragmentManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         OnActionBtnProfile()
         OnClickBtnHome()
 
+
+        val bundle: Bundle? = intent.extras
+        val user: String? = bundle?.getString("email")
+        val provider: String? = bundle?.getString("provider")
+
+        UserLoged(user ?:"", provider ?: "")
     }
 
     fun OnClickBtnHome(){
@@ -55,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 fragmentTransaction.commit()
             } else{
                 val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-                //showToast("Ya esta creado el fragmento login")
+                showToast("Ya esta creado el fragmento login")
                 fragmentTransaction.remove(profileFragment)
                 fragmentManager.popBackStack()
                 fragmentTransaction.commit()
@@ -84,7 +96,12 @@ class MainActivity : AppCompatActivity() {
                 showToast("Error ocurrido: ${it.localizedMessage}")
             }
     }
+    fun UserLoged ( email:String, provider: String ) {
+        binding.textCorreo.text = email
 
+    }
 }
+
+
 
 
