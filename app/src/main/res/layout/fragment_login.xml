@@ -24,8 +24,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:contentDescription="@string/todo" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView10"
@@ -36,14 +35,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.783"
-            android:contentDescription="@string/imagineProfile" />
+            app:layout_constraintVertical_bias="0.783" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inicie_sesion"
+            android:text="Inicie Sesion"
             android:textColor="#ffffffff"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -58,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/usuario"
+            android:text="Usuario"
             android:textSize="27sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/inputemail"
@@ -74,20 +72,19 @@
             android:layout_marginEnd="32dp"
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
-            android:hint="@string/name"
+            android:hint="Name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18"
-            android:autofillHints="" />
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/constrase_a"
+            android:text="Constraseña"
             android:textSize="27sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/inputpass"
@@ -101,13 +98,11 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:autofillHints=""
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
-            android:hint="@string/contrase_a"
+            android:hint="Contraseña"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:textColorHint="#757575"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
@@ -120,7 +115,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/button"
+            android:text="Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputpass" />
@@ -130,11 +125,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/tambien_puede_usar"
+            android:text="Tambien puede usar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnlogin"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
 
         <ImageView
             android:id="@+id/imggoogle"
@@ -147,8 +141,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imgfacebook"
             app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
-            android:contentDescription="@string/google" />
+            app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
 
         <ImageView
             android:id="@+id/imgfacebook"
@@ -158,8 +151,7 @@
             android:src="@drawable/facebook"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
-            android:contentDescription="@string/Facebook" />
+            app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
 
         <ImageView
             android:id="@+id/imgtwitter"
@@ -171,8 +163,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toEndOf="@+id/imgfacebook"
-            app:layout_constraintTop_toBottomOf="@+id/textcomplementario"
-            android:contentDescription="@string/twitter" />
+            app:layout_constraintTop_toBottomOf="@+id/textcomplementario" />
 
         <TextView
             android:id="@+id/textView21"
@@ -180,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/ya_te_encuentras_registrado"
+            android:text="Ya te encuentras registrado?"
             app:layout_constraintStart_toStartOf="@+id/imggoogle"
             app:layout_constraintTop_toBottomOf="@+id/imgfacebook" />
 
@@ -189,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/registrate"
+            android:text="Registrate"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imgtwitter"
             android:textColor="@color/light_blue_900"

@@ -19,15 +19,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/cat_1"
-        android:contentDescription="@string/categoryPic" />
+        app:srcCompat="@drawable/cat_1" />
 
     <TextView
         android:id="@+id/categoryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/nombreCategoria"
+        android:text="title"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/categoryPic"
