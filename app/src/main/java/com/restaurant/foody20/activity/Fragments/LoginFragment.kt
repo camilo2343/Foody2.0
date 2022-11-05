@@ -34,15 +34,17 @@ class LoginFragment : Fragment() {
 
             var email = binding.inputemail.text.toString()
             var pass = binding.inputpass.text.toString()
-
+            println("correo  $email pass  $pass")
             if ( email.isNotEmpty()  && pass.isNotEmpty()){
                 ///if(esCorreo(email.toString())){ }
 
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(email,pass).addOnCompleteListener{
                         if (it.isSuccessful){
+                            println("ENTRO LOGIN")
                             showHome(it.result?.user?.email.toString(), ProviderType.BASIC)
                         }else{
+                            println("NO ENTRO LOGIN")
                             showAlertFiled()
                         }
 

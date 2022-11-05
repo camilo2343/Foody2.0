@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.restaurant.foody20.LogOutFragment
 import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.Adaptador.PopulateAdapter
 import com.restaurant.foody20.activity.Fragments.LoginFragment
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     val profileFragment = LoginFragment()
+    val logoutFragment = LogOutFragment()
     val fragmentManager: FragmentManager = supportFragmentManager
 
 
@@ -36,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         dataPopulate()
         OnActionBtnProfile()
         OnClickBtnHome()
-
 
         val bundle: Bundle? = intent.extras
         val user: String? = bundle?.getString("email")
@@ -57,23 +59,35 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     fun  OnActionBtnProfile(){
         binding.btnProfile.setOnClickListener(View.OnClickListener {
-            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-            val count = supportFragmentManager.backStackEntryCount
-            if (count == 0 ) {
-                fragmentTransaction.replace(R.id.activity_main, profileFragment)
+            val loggedIn = FirebaseAuth.getInstance().currentUser != null
+            if (loggedIn){
+                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.activity_main, logoutFragment)
                 fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
-            } else{
-                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-                showToast("Ya esta creado el fragmento login")
-                fragmentTransaction.remove(profileFragment)
-                fragmentManager.popBackStack()
-                fragmentTransaction.commit()
+            }else{
+                val count = supportFragmentManager.backStackEntryCount
+                if (count == 0 ) {
+                    val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+                    fragmentTransaction.replace(R.id.activity_main, profileFragment)
+                    fragmentTransaction.addToBackStack(null)
+                    fragmentTransaction.commit()
+                } else{
+                    val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+                    //showToast("Ya esta creado el fragmento login")
+                    fragmentTransaction.remove(profileFragment)
+                    fragmentManager.popBackStack()
+                    fragmentTransaction.commit()
+                }
             }
         })
     }
+
+
+
 
     private fun dataPopulate() {
         val adapter = PopulateAdapter(this, PopulateData.dataPopulate)
