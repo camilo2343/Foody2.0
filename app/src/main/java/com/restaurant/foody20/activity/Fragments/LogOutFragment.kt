@@ -1,11 +1,10 @@
-package com.restaurant.foody20
+package com.restaurant.foody20.activity.Fragments
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.restaurant.foody20.activity.MainActivity
@@ -15,13 +14,13 @@ import com.restaurant.foody20.databinding.FragmentLogOutBinding
 class LogOutFragment : Fragment() {
 
     private lateinit var _binding: FragmentLogOutBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentLogOutBinding.inflate(inflater, container, false)
         LogOut()

@@ -8,10 +8,11 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.restaurant.foody20.LogOutFragment
 import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.Adaptador.PopulateAdapter
+import com.restaurant.foody20.activity.Fragments.LogOutFragment
 import com.restaurant.foody20.activity.Fragments.LoginFragment
+import com.restaurant.foody20.activity.Fragments.RegisterFragment
 import com.restaurant.foody20.activity.Information.PopulateData
 import com.restaurant.foody20.activity.Modelos.CategoryModel
 import com.restaurant.foody20.databinding.ActivityMainBinding
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val profileFragment = LoginFragment()
     val logoutFragment = LogOutFragment()
-    val fragmentManager: FragmentManager = supportFragmentManager
+    val registerFragment = RegisterFragment()
+    private val fragmentManager: FragmentManager = supportFragmentManager
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,14 +68,14 @@ class MainActivity : AppCompatActivity() {
             if (loggedIn){
                 val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
                 fragmentTransaction.replace(R.id.activity_main, logoutFragment)
-                fragmentTransaction.addToBackStack(null)
+                fragmentTransaction.addToBackStack("login")
                 fragmentTransaction.commit()
             }else{
                 val count = supportFragmentManager.backStackEntryCount
                 if (count == 0 ) {
                     val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
                     fragmentTransaction.replace(R.id.activity_main, profileFragment)
-                    fragmentTransaction.addToBackStack(null)
+                    fragmentTransaction.addToBackStack("login")
                     fragmentTransaction.commit()
                 } else{
                     val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()

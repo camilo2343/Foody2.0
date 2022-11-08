@@ -7,25 +7,44 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
+import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.MainActivity
 import com.restaurant.foody20.activity.ProviderType
 import com.restaurant.foody20.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
+    val registerFragment = RegisterFragment()
     private lateinit var _binding: FragmentLoginBinding
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         inicioSesion()
+        irRegistro()
         return _binding.root
     }
 
+    private fun irRegistro() {
+        binding.btnregistro.setOnClickListener{
+            val fragmentTransaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.activity_main, registerFragment )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        }
+
+    }
 
 
     fun inicioSesion(){
@@ -105,4 +124,6 @@ class LoginFragment : Fragment() {
 
 
 }
+
+
 
