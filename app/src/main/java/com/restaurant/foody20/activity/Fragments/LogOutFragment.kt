@@ -10,7 +10,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.restaurant.foody20.activity.MainActivity
 import com.restaurant.foody20.databinding.FragmentLogOutBinding
 
-
+enum class NameType{
+    BASIC
+}
+@Suppress("NAME_SHADOWING")
 class LogOutFragment : Fragment() {
 
     private lateinit var _binding: FragmentLogOutBinding
@@ -24,6 +27,9 @@ class LogOutFragment : Fragment() {
 
         _binding = FragmentLogOutBinding.inflate(inflater, container, false)
         LogOut()
+        val args = arguments
+        val index = args?.getString("name")
+        UserLoged(index.toString())
         return _binding.root
 
     }
@@ -36,5 +42,8 @@ class LogOutFragment : Fragment() {
         }
     }
 
+    fun UserLoged ( name:String ) {
+        binding.textusuario.text = "Espero que regreses pronto $name"
+    }
 
 }

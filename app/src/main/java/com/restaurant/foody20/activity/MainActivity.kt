@@ -17,7 +17,7 @@ import com.restaurant.foody20.activity.Information.PopulateData
 import com.restaurant.foody20.activity.Modelos.CategoryModel
 import com.restaurant.foody20.databinding.ActivityMainBinding
 
-enum class ProviderType{
+enum class NameType{
 BASIC
 }
 
@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val profileFragment = LoginFragment()
     val logoutFragment = LogOutFragment()
-    val registerFragment = RegisterFragment()
     private val fragmentManager: FragmentManager = supportFragmentManager
 
 
@@ -43,10 +42,13 @@ class MainActivity : AppCompatActivity() {
         OnClickBtnHome()
 
         val bundle: Bundle? = intent.extras
-        val user: String? = bundle?.getString("email")
+        val user: String? = bundle?.getString("name")?.uppercase()
         val provider: String? = bundle?.getString("provider")
-
         UserLoged(user ?:"", provider ?: "")
+        val frag = logoutFragment
+        bundle?.putString("name", bundle?.getString("name")?.uppercase())
+        frag.arguments = bundle
+
     }
 
     fun OnClickBtnHome(){
@@ -112,8 +114,8 @@ class MainActivity : AppCompatActivity() {
                 showToast("Error ocurrido: ${it.localizedMessage}")
             }
     }
-    fun UserLoged ( email:String, provider: String ) {
-        binding.textCorreo.text = email
+    fun UserLoged ( name:String, provider: String ) {
+        binding.textCorreo.text = name
 
     }
 }
