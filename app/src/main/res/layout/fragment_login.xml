@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
-    android:theme="@style/ThemeOverlay.Foody20.FullscreenContainer">
+    android:theme="@style/ThemeOverlay.Foody20.FullscreenContainer"
+    tools:context=".activity.Fragments.LoginFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -191,6 +192,16 @@
                 app:layout_constraintHorizontal_bias="0.217"
                 app:layout_constraintStart_toEndOf="@+id/textView21"
                 app:layout_constraintTop_toBottomOf="@+id/imgfacebook" />
+
+            <TextView
+                android:id="@+id/btnForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="¿Olvidaste tu contraseña?"
+                app:layout_constraintEnd_toEndOf="@+id/btnregistro"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

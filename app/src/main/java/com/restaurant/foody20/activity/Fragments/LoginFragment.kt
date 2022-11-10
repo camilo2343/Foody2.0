@@ -22,6 +22,7 @@ import java.util.regex.Pattern
 class LoginFragment : Fragment() {
 
     val registerFragment = RegisterFragment()
+    val olvidastePass = ForgotPassFragment()
     private lateinit var _binding: FragmentLoginBinding
     private val binding get() = _binding!!
     val db = FirebaseFirestore.getInstance()
@@ -38,7 +39,18 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         inicioSesion()
         irRegistro()
+        irRecuperarPass()
         return _binding.root
+    }
+
+    private fun irRecuperarPass() {
+        binding.btnForgotPass.setOnClickListener{
+            val fragmentTransaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.activity_main, olvidastePass )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        }
     }
 
     private fun irRegistro() {
