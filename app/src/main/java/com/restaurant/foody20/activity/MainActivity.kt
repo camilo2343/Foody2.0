@@ -1,5 +1,6 @@
 package com.restaurant.foody20.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val profileFragment = LoginFragment()
     val logoutFragment = LogOutFragment()
+    val registerFragment = RegisterFragment()
     private val fragmentManager: FragmentManager = supportFragmentManager
 
 
@@ -43,8 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         val bundle: Bundle? = intent.extras
         val user: String? = bundle?.getString("name")?.uppercase()
-        val provider: String? = bundle?.getString("provider")
-        UserLoged(user ?:"", provider ?: "")
+        UserLoged(user ?:"")
         val frag = logoutFragment
         bundle?.putString("name", bundle?.getString("name")?.uppercase())
         frag.arguments = bundle
@@ -57,6 +58,8 @@ class MainActivity : AppCompatActivity() {
             val count = supportFragmentManager.backStackEntryCount
             if ( count > 0) {
                 fragmentTransaction.remove(profileFragment)
+                fragmentTransaction.remove(logoutFragment)
+                fragmentTransaction.remove(registerFragment)
                 fragmentManager.popBackStack()
                 fragmentTransaction.commit()
             }
@@ -106,6 +109,12 @@ class MainActivity : AppCompatActivity() {
                     for (document in documents) {
                         val categorias = documents.toObjects(CategoryModel::class.java)
                         val adapter  = CategoryAdapter(this, categorias)
+                        adapter.onItemClick = {
+                            val showCatalogActivity: Intent = Intent(this@MainActivity, CatalogActivity::class.java ).apply {
+                                putExtra("tipo", it.type)
+                            }
+                            startActivity(showCatalogActivity)
+                        }
                         binding.recyclerViewCat.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
                         binding.recyclerViewCat.adapter = adapter
                     }
@@ -114,11 +123,12 @@ class MainActivity : AppCompatActivity() {
                 showToast("Error ocurrido: ${it.localizedMessage}")
             }
     }
-    fun UserLoged ( name:String, provider: String ) {
+    fun UserLoged ( name:String ) {
         binding.textCorreo.text = name
-
     }
+
 }
+
 
 
 

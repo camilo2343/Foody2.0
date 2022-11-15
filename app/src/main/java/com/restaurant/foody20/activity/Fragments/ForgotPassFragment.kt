@@ -22,10 +22,6 @@ import com.restaurant.foody20.databinding.FragmentForgotPassBinding
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
-/**
- * An example full-screen fragment that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 class ForgotPassFragment : Fragment() {
 
     private var _binding: FragmentForgotPassBinding? = null
@@ -55,10 +51,6 @@ class ForgotPassFragment : Fragment() {
             } else{
                 mAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener{
-                        //Toast.makeText(getActivity(), "Se ha enviado el correo correctamente.",
-                            //Toast.LENGTH_SHORT).show()
-                        //val homeIntent: Intent = Intent( this@ForgotPassFragment.context, MainActivity::class.java ).apply {}
-                       // startActivity(homeIntent)
                         showHome(email)
                     }
                     .addOnFailureListener{
@@ -80,11 +72,9 @@ class ForgotPassFragment : Fragment() {
                     nameUser = document.data.get("name").toString()
                     println("ESTE ES EL NOMBRE QUE TRAE $nameUser")
                     val homeIntent: Intent = Intent( this@ForgotPassFragment.context, MainActivity::class.java ).apply {}
-
                 startActivity(homeIntent)
                 }
             }
     }
-
 
 }

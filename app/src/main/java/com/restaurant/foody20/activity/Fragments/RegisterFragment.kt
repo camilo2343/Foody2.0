@@ -43,7 +43,7 @@ class RegisterFragment : Fragment() {
 
             val passwordRegex = Pattern.compile("^" +
                     "(?=.*[‐@#$%^&+=])" +     // Al menos 1 carácter especial
-                    ".{8,}" +                // Al menos 4 caracteres
+                    ".{8,}" +                // Al menos 8 caracteres
                     "$")
             if(name.isEmpty()){
                 Toast.makeText(getActivity(), "El nombre esta vacio.",

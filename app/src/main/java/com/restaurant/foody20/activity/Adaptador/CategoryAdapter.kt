@@ -1,6 +1,8 @@
 package com.restaurant.foody20.activity
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +13,11 @@ import com.bumptech.glide.Glide
 import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.Modelos.CategoryModel
 
-class CategoryAdapter(private val context: Context, private val categories: List<CategoryModel> ):
+
+class CategoryAdapter(private val context: Context, private val categories: List<CategoryModel>):
     RecyclerView.Adapter<CategoryViewHolder>() {
 
+    var onItemClick: ((CategoryModel) -> Unit)? = null
 
     override fun getItemCount(): Int {
         return categories.size
@@ -34,14 +38,25 @@ class CategoryAdapter(private val context: Context, private val categories: List
         Glide.with(context)
             .load(category.url)
             .into(holder.url)
+        println ("valores de categorias ${category.type}")
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(category)
+        }
     }
 }
 
 
-class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val type: TextView = itemView.findViewById(R.id.categoryName)
-    val url: ImageView = itemView.findViewById(R.id.categoryPic)
+class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+        val type: TextView = itemView.findViewById(R.id.categoryName)
+        val url: ImageView = itemView.findViewById(R.id.categoryPic)
+    }
 
 
-}
+
+
+
+
+
+
 

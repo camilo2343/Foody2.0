@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/cat_fondo"
+    android:elevation="3dp"
+    tools:context=".activity.CatalogActivity">
+
+
+    <ImageView
+        android:id="@+id/itemCat"
+        android:layout_width="99dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/pizza"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombreCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Pizza"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/itemCat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descripcionCat"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Pizza de pollo y champiñones de carne"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/itemCat"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCat" />
+
+    <TextView
+        android:id="@+id/simPesos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="$"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCat"
+        app:layout_constraintStart_toEndOf="@+id/itemCat"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionCat" />
+
+    <TextView
+        android:id="@+id/valorCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="30.000"
+        app:layout_constraintBottom_toBottomOf="@+id/simPesos"
+        app:layout_constraintStart_toEndOf="@+id/simPesos"
+        app:layout_constraintTop_toTopOf="@+id/simPesos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

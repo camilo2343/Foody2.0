@@ -24,7 +24,7 @@ class LoginFragment : Fragment() {
     val registerFragment = RegisterFragment()
     val olvidastePass = ForgotPassFragment()
     private lateinit var _binding: FragmentLoginBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
     val db = FirebaseFirestore.getInstance()
     var nameUser = ""
 
@@ -49,7 +49,6 @@ class LoginFragment : Fragment() {
             fragmentTransaction.replace(R.id.activity_main, olvidastePass )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
-
         }
     }
 
@@ -59,11 +58,8 @@ class LoginFragment : Fragment() {
             fragmentTransaction.replace(R.id.activity_main, registerFragment )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
-
         }
-
     }
-
 
     fun inicioSesion(){
 
@@ -83,7 +79,6 @@ class LoginFragment : Fragment() {
                 } else {
                     LoginUser(email,pass)
                 }
-
             }else{
                 showAlertEmpty()
             }
@@ -140,28 +135,6 @@ class LoginFragment : Fragment() {
         val dialogo: AlertDialog = constructor.create()
         dialogo.show()
     }
-
-/*
-    fun esCorreo(texto:String):Boolean{
-        var patroncito: Pattern =Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-        var comparador: Matcher =patroncito.matcher(texto)
-        return comparador.find()
-    }
-
-    fun isPassword(texto:String): Boolean{
-        var minus: Pattern =Pattern.compile("[a-z]")
-        var mayus: Pattern =Pattern.compile("[A-Z]")
-        var num: Pattern =Pattern.compile(".*\\\\d.*")
-        var simbolos: Pattern =Pattern.compile(".*[!@#\$%^&*+=?-].*")
-        var espacios: Pattern = Pattern.compile(".*\\\\s.*")
-        var control:Boolean = true
-
-        return true
-
-    }
-    */
-
-
 }
 
 
