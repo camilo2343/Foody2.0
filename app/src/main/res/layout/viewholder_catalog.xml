@@ -71,4 +71,43 @@
         app:layout_constraintStart_toEndOf="@+id/simPesos"
         app:layout_constraintTop_toTopOf="@+id/simPesos" />
 
+    <TextView
+        android:id="@+id/mas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="+"
+        android:gravity="center"
+        android:background="@drawable/btn_category"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/valorCat"
+        app:layout_constraintStart_toEndOf="@+id/valorCat"
+        app:layout_constraintTop_toTopOf="@+id/valorCat" />
+
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:background="@drawable/btn_category"
+        android:padding="8dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/mas"
+        app:layout_constraintStart_toEndOf="@+id/mas"
+        app:layout_constraintTop_toTopOf="@+id/mas" />
+
+    <TextView
+        android:id="@+id/menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:background="@drawable/btn_category"
+        android:text="-"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cantidad"
+        app:layout_constraintStart_toEndOf="@+id/cantidad"
+        app:layout_constraintTop_toTopOf="@+id/cantidad" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
