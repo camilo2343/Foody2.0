@@ -26,6 +26,7 @@ class PopulateAdapter(private val context: Context, private val populate: List<P
         holder.title.text = varItem.title
         holder.pic.setImageResource(varItem.pic)
         holder.cost.text = varItem.cost.toString()
+        //aqui hay que agregar el setOnclick de un boton pero no pude :'(
     }
 
     override fun getItemCount(): Int {
@@ -39,4 +40,7 @@ class PopulateAdapter(private val context: Context, private val populate: List<P
     }
 
 }
+
+
+
 

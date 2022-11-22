@@ -1,6 +1,10 @@
 package com.restaurant.foody20.activity.Modelos
 
-data class PopularModel(val title:String, val pic: Int, val description:String, val cost: Double, val numberCard: Int) {
+import android.os.Parcel
+import android.os.Parcelable
+
+
+data class PopularModel(val title:String, val pic: Int, val description:String, val cost: Double, val numberInCart: Int) {
 
     constructor(): this(
         "",
@@ -9,4 +13,8 @@ data class PopularModel(val title:String, val pic: Int, val description:String, 
         0.0,
         0
     )
-}
+
+    }
+
+
+

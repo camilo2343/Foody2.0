@@ -26,7 +26,7 @@ class CatalogAdapter(private val context: Context, private val catalogModel: Mut
     override fun onBindViewHolder(holder: CatalogViewHolder, position: Int) {
         val catalog = catalogModel[position]
         holder.nombreCat.text = catalog.nombre
-        holder.descripcionCat.text = catalog.descripcion
+        holder.descripcionCat.text = catalog.description
         holder.valorCat.text = catalog.valor.toString()
         Glide.with(context)
             .load(catalog.url)

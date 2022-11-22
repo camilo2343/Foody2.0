@@ -3,12 +3,15 @@ package com.restaurant.foody20.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.restaurant.foody20.CartListActivity
 import com.restaurant.foody20.R
 import com.restaurant.foody20.activity.Adaptador.PopulateAdapter
 import com.restaurant.foody20.activity.Fragments.LogOutFragment
@@ -42,12 +45,13 @@ class MainActivity : AppCompatActivity() {
         dataPopulate()
         OnActionBtnProfile()
         OnClickBtnHome()
+        bottomNavigation()
 
         val bundle: Bundle? = intent.extras
         val user: String? = bundle?.getString("name")?.uppercase()
         UserLoged(user ?:"")
         val frag = logoutFragment
-        bundle?.putString("name", bundle?.getString("name")?.uppercase())
+        bundle?.putString("name", bundle.getString("name")?.uppercase())
         frag.arguments = bundle
 
     }
@@ -126,7 +130,26 @@ class MainActivity : AppCompatActivity() {
     fun UserLoged ( name:String ) {
         binding.textCorreo.text = name
     }
-
+    private fun bottomNavigation() {
+        val floatingActionButton = findViewById<FloatingActionButton>(R.id.cartBtn)
+        val homeBtn = findViewById<LinearLayout>(R.id.btnhome)
+        floatingActionButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    CartListActivity::class.java
+                )
+            )
+        }
+        homeBtn.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    MainActivity::class.java
+                )
+            )
+        }
+    }
 }
 
 

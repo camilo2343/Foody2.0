@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Catalogo de comida"
+        android:text="@string/food_catalog"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -192,17 +192,6 @@
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#D3BEAB"
-            android:contentDescription="@string/shopping_cart"
-            android:elevation="3dp"
-            android:src="@drawable/shopping_cart"
-            app:backgroundTint="#D3BEAB"
-            app:layout_anchor="@id/app_bar"
-            app:maxImageSize="30dp"
-            app:tint="#000000"></com.google.android.material.floatingactionbutton.FloatingActionButton>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

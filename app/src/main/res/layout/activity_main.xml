@@ -87,7 +87,7 @@
                     android:background="@drawable/search_background"
                     android:drawableStart="@drawable/search"
                     android:ems="10"
-                    android:hint="@string/Forage"
+                    android:hint="@string/Search"
                     android:inputType="textPersonName"
                     android:paddingStart="20sp"
                     android:textSize="14sp"
@@ -391,17 +391,17 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#D3BEAB"
+            android:contentDescription="@string/shopping_cart"
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#D3BEAB"
             app:layout_anchor="@id/app_bar"
             app:maxImageSize="30dp"
-            app:tint="#000000"
-            android:contentDescription="@string/shopping_cart">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            app:tint="#000000"></com.google.android.material.floatingactionbutton.FloatingActionButton>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     

@@ -34,7 +34,7 @@ class CategoryAdapter(private val context: Context, private val categories: List
         val category = categories[position]
         holder.type.text = category.type
 
-        // Codigo para Firebase
+        // Código para Firebase
         Glide.with(context)
             .load(category.url)
             .into(holder.url)

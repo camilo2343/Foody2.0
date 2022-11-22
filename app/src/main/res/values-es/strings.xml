@@ -1,55 +1,88 @@
 <resources>
-    <string name="app_name">Foody2.0</string>
 
-    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
-    <string name="dummy_button">Boton Dummy</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="shopping_cart">Carrito de compras</string>
-    <string name="Settings_1">Ajustes</string>
-    <string name="settings">Ajustes</string>
+    //activity_catalog
+    <string name="food_catalog">Catalogo de comida </string>
+    <string name="home">Inicio</string>
+    <string name="login">Inicion de sesión</string>
+    <string name="btn2">btn2</string>
+    <string name="profile">Perfil</string>
+    <string name="btn3">btn3</string>
+    <string name="login_1">Inicio de sesión</string>
+    <string name="btn3oculto">btn3oculto</string>
     <string name="support">Soporte</string>
-    <string name="hello">Hi</string>
+    <string name="settings">Ajustes</string>
+    <string name="Settings_1">Ajustes</string>
+
+    //activity_intro
+    <string name="get_started">Empecemos!!</string>
+    <string name="imagineView">imagineView</string>
+    <string name="app_name">Foody2.0</string>
+    <string name="imagineview2">Imagineview2</string>
+    <string name="food_shipment_app">App de envío de alimentos</string>
+
+
+    //activity_main
+    <string name="hello">Hola</string>
     <string name="User">Usuario</string>
     <string name="order_and_eat">Pide y come</string>
-    <string name="imagineView3">TODO</string>
-    <string name="Forage">Forage</string>
-    <string name="all">Todo</string>
-    <string name="free_delivery">Envio gratis</string>
-    <string name="nov_1_dec_31">Nov 1 - Dic 31</string>
+    <string name="imagineView3">imagineView3</string>
+    <string name="Search">Buscar</string>
+    <string name="all">All</string>
+    <string name="free_delivery">Envío gratuito</string>
+    <string name="nov_1_dec_31">Nov 1 a Dic 31</string>
     <string name="order_now">Ordena ahora</string>
     <string name="categories">Categorias</string>
     <string name="popular">Popular</string>
-    <string name="home">Inicio</string>
-    <string name="login">Inicio de sesión</string>
-    <string name="btn2">btn2</string>
-    <string name="profile">Perfil</string>
-    <string name="btn3">TODO</string>
-    <string name="login_1">Inicio de sesión</string>
-    <string name="imagineView">Imagine view</string>
-    <string name="foody">Foody</string>
-    <string name="imagineview2">imagineView2</string>
-    <string name="food_shipment_app">Food shipment App</string>
-    <string name="let_us_begin">Let us begin</string>
-    <string name="imagineView9">TODO</string>
-    <string name="imagineview10">imagineView10</string>
-    <string name="login_2">Inicio</string>
-    <string name="user_login">Usuario</string>
+    <string name="shopping_cart">Carrito de compras</string>
+
+    //fragment_forgot_pass
+    <string name="imagineView9">imagineView9</string>
+    <string name="password_recovery">Recuperar contraseña</string>
+    <string name="enter_your_email">Ingrese su correo electrónico</string>
+    <string name="email">Correo electrónico</string>
+    <string name="send">Enviar</string>
+
+    //fragment_log_out
+    <string name="imagineview10">imagineview10</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="come_back_soon">Regresa pronto</string>
+    <string name="user_1">Usuario</string>
+    <string name="exit">Salir</string>
+
+    //fragment_login
+    <string name="Login_in">Login_in</string>
     <string name="name">Nombre</string>
-    <string name="Password">Contraseña</string>
-    <string name="Login_in">Acceso</string>
-    <string name="you_may_also_use">También puede utilizar</string>
+    <string name="password_1">Contraseña</string>
+    <string name="you_may_also_use">También puede usar</string>
     <string name="log_google">log_google</string>
-    <string name="password_1">Password</string>
-    <string name="log_facebook">TODO</string>
-    <string name="log_twitter">TODO</string>
-    <string name="sign_up">Registrate</string>
+    <string name="log_facebook">log_facebook</string>
+    <string name="log_twitter">log_twitter</string>
     <string name="are_you_already_registered">¿Ya está registrado?</string>
-    <string name="simb_pesos">$</string>
-    <string name="cost">0.0</string>
-    <string name="img_pizza">TODO</string>
-    <string name="add">+ Add</string>
-    <string name="Pizzas">title</string>
-    <string name="categ_pic">TODO</string>
-    <string name="img_pizza1">title</string>
-    <string name="btn3oculto">TODO</string>
+    <string name="sign_up">Inscríbete</string>
+    <string name="forgot_your_password">¿Olvidaste tu contraseña?</string>
+    <string name="register">Registro</string>
+    <string name="lastname">Apellido</string>
+    <string name="email_1">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="register_1">Registrate</string>
+
+    //viewholder_catalog
+    <string name="pizza">Pizza</string>
+    <string name="chicken_and_mushroom_meat_pizza">Pizza de pollo y champiñones de carne</string>
+    <string name="COP">COP</string>
+    <string name="_30_000">30.000</string>
+
+    //viewholder_populate
+    <string name="Pizzas">Pizzas</string>
+    <string name="png_pizza">png pizza</string>
+    <string name="cost">Precio</string>
+    <string name="simb_pesos">Simbol_pesos</string>
+    <string name="add">Agregar</string>
+
+    //viewholder_category
+    <string name="categ_pic">Categoria</string>
+    <string name="img_pizza1">img_pizza</string>
+    <string name="title">title</string>
+
+
 </resources>
